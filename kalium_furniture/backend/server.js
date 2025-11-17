@@ -43,17 +43,11 @@ app.get('/', (req, res) => {
         getAll: 'GET /api/products',
         getById: 'GET /api/products/:id',
         getBySlug: 'GET /api/products/slug/:slug',
-        getByArticle: 'GET /api/products/article/:articleNumber',
-        create: 'POST /api/products',
-        update: 'PUT /api/products/:id',
-        delete: 'DELETE /api/products/:id'
+        getByArticle: 'GET /api/products/article/:articleNumber'
       },
       categories: {
         getAll: 'GET /api/categories',
-        getBySlug: 'GET /api/categories/:slug',
-        create: 'POST /api/categories',
-        update: 'PUT /api/categories/:id',
-        delete: 'DELETE /api/categories/:id'
+        getBySlug: 'GET /api/categories/:slug'
       }
     },
     database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
